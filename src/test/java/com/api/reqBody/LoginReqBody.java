@@ -12,7 +12,7 @@ public class LoginReqBody extends CommonUtils{
 	int responseCode =0;	
 
 	private static String token;
-	public static Response response;
+
 
 	// login
 	public static void postRequestToGenerateToken() throws IOException {
