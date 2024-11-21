@@ -14,11 +14,19 @@ public class BatchSteps extends CommonUtils{
 	
 	BatchReqBody batchReqBodyObj = new BatchReqBody();
 	
-	@Given("User creates POST request with {string} data")
-	public void user_creates_post_request_with_data(String scenarioType) throws IOException {
+	@Given("User creates POST request")
+	public void user_creates_post_request() {
 	    // Write code here that turns the phrase above into concrete actions
+	   // throw new io.cucumber.java.PendingException();
+	}
+	
 
-		if (scenarioType.equals("CreateBatchWithoutAuth"))
+	@When("User sends POST HTTP request with {string} and endpoint")
+	public void user_sends_post_http_request_with_and_endpoint(String scenarioType) throws IOException {
+	    // Write code here that turns the phrase above into concrete actions
+	  
+	    
+	    if (scenarioType.equals("CreateBatchWithoutAuth"))
 		{
 			batchReqBodyObj.createBatchWithoutAuth(scenarioType);
 		} else if (scenarioType.equals("CreateBatchWithValidData") || scenarioType.equals("CreateBatchExistingBatchName") ||
@@ -33,12 +41,6 @@ public class BatchSteps extends CommonUtils{
 			else 
 				System.out.println("Ending all scenarios");
 		
-	}
-
-	@When("User sends POST HTTP request with endpoint")
-	public void user_sends_post_http_request_with_endpoint() {
-	    // Write code here that turns the phrase above into concrete actions
-	  //  throw new io.cucumber.java.PendingException();
 	}
 
 	@Then("User receives {int} and with response body for create")
