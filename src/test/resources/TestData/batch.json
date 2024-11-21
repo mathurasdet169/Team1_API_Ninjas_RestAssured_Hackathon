@@ -1,0 +1,74 @@
+{
+    "CreateBatchWithValidData": {
+        "batchDescription": "Java Developer",
+        "batchName": "APINinja002",
+        "batchNoOfClasses": 10,
+        "batchStatus": "Active",
+        "programId": 16220,
+      "programName": "Core Java Program"
+    },
+
+    "CreateBatchWithMissingAdditioanlFields": {
+    "batchDescription": "",
+    "batchName": "APINinjas02",
+    "batchNoOfClasses": 10,
+    "batchStatus": "Active",
+    "programId": 16220,
+  "programName": "Core Java Program"
+   },
+
+    "CreateBatchWithInvalidData": {
+        "batchDescription": "*****",
+        "batchName": "APINinja001",
+        "batchNoOfClasses": 10,
+        "batchStatus": "Active",
+        "programId": 16220,
+      "programName": "Core Java Program"
+    },
+
+    "CreateBatchExistingBatchName": {
+        "batchDescription": "Java Developer",
+        "batchName": "APINinja001",
+        "batchNoOfClasses": 10,
+        "batchStatus": "Active",
+        "programId": 16220,
+      "programName": "Core Java Program"
+    },
+
+    "CreateBatchWithMissingData": {
+        "batchDescription": "Java Developer",
+        "batchName": "APINinja001",
+        "batchNoOfClasses": 0,
+        "batchStatus": "Active",
+        "programId": 16220,
+      "programName": "Core Java Program"
+    },
+
+    "CreateBatchWithInvalidEndpoint": {
+      "batchDescription": "Java Developer",
+      "batchName": "APINinja001",
+      "batchNoOfClasses": 10,
+      "batchStatus": "Active",
+      "programId": 16220,
+    "programName": "Core Java Program"
+  },
+
+  "CreateBatchWithoutAuth": {
+      "batchDescription": "Java Developer",
+      "batchName": "APINinja001",
+      "batchNoOfClasses": 10,
+      "batchStatus": "Active",
+      "programId": 16220,
+    "programName": "Core Java Program"
+  },
+
+  "CreateBatchWithInactiveProgId": {
+      "batchDescription": "",
+      "batchName": "APINinjas03",
+      "batchNoOfClasses": 10,
+      "batchStatus": "Active",
+      "programId": 16225,
+    "programName": "Java SpringBoot"
+     }
+
+}

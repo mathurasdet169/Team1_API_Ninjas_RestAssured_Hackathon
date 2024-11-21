@@ -9,11 +9,13 @@ import com.api.payLoad.LoginPayload;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class CommonUtils {
 	public static RequestSpecification request;
 	public static RequestSpecification userRequest;
+	public static Response response;
 	public static ResourceBundle endpoint = ResourceBundle.getBundle("endpoint");	
 	public static ResourceBundle path = ResourceBundle.getBundle("path");	
 	
