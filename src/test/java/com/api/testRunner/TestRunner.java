@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 				
 				  features={"./src/test/resources/Features"},
 						 		 
-				  glue = "com.api.stepDef",
+				  glue = {"com.api.hooks","com.api.stepDef"},
 				  plugin = {"pretty", "html:reports/cucumberReport.html", //----Cucumber Report
 						  "rerun:target/rerun.txt",
 						
