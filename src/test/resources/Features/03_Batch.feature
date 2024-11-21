@@ -22,8 +22,8 @@ Feature: Batch Module
 
   @Post
   Scenario Outline: Check user able to create batch with json data
-    Given User creates POST request with "<ScenarioType>" data
-    When User sends POST HTTP request with endpoint
+    Given User creates POST request 
+    When User sends POST HTTP request with "<ScenarioType>" and endpoint
     Then User receives <statusCode> and with response body for create
     
         Examples:
