@@ -15,13 +15,12 @@ public class LoginReqBody extends CommonUtils{
 	int responseCode =0;	
 
 	private static String token;
-	public static Response response;
+
 
 	// login
 	public static void postRequestToGenerateToken() throws IOException {
 
-	
-		 response = request.body(jsonReaderObj.login_json_Reader(path.getString("loginJsonFilePath"), "post_positiveLogin")).post(JsonReader.endpoint);
+		response = request.body(jsonReaderObj.login_json_Reader(path.getString("loginJsonFilePath"), "post_positiveLogin")).post(endpoint.getString("login"));
 		token = response.jsonPath().getString("token");
 		System.out.println("token-->" + token);
 
