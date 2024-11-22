@@ -2,7 +2,10 @@ package com.api.stepDef;
 
 import java.io.IOException;
 
+import org.testng.Assert;
+
 import com.api.reqBody.LoginReqBody;
+import com.api.utilities.JsonReader;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -24,8 +27,9 @@ public class LoginSteps {
 
 	@Then("Admin receives {int} created with auto generated token")
 	public void admin_receives_created_with_auto_generated_token(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	//    throw new io.cucumber.java.PendingException();
+	
+		Assert.assertEquals(JsonReader.EXP_STATUSCODE, 200);
+		
 	}
 
 }
