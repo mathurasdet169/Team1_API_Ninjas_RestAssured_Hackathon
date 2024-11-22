@@ -2,8 +2,11 @@ package com.api.reqBody;
 
 import java.io.IOException;
 
+
+
 import com.api.payLoad.LoginPayload;
 import com.api.utilities.CommonUtils;
+import com.api.utilities.JsonReader;
 
 import io.restassured.response.Response;
 
@@ -18,7 +21,7 @@ public class LoginReqBody extends CommonUtils{
 	public static void postRequestToGenerateToken() throws IOException {
 
 	
-		 response = request.body(jsonReaderObj.login_json_Reader(path.getString("loginJsonFilePath"), "post_positiveLogin")).post(endpoint.getString("login"));
+		 response = request.body(jsonReaderObj.login_json_Reader(path.getString("loginJsonFilePath"), "post_positiveLogin")).post(JsonReader.endpoint);
 		token = response.jsonPath().getString("token");
 		System.out.println("token-->" + token);
 
