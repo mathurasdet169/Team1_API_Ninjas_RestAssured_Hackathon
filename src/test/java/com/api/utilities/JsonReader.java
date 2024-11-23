@@ -15,7 +15,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 public class JsonReader {
-<<<<<<< Updated upstream
 	public static int EXP_STATUSCODE;
 	public static String endpoint;
 	
@@ -68,7 +67,6 @@ public class JsonReader {
     	
     	
     		
-=======
 
 	public  String batch_json_Reader(String filepath,String scenarioNode) throws IOException
 	{
@@ -133,7 +131,6 @@ public class JsonReader {
 		}
 		return scenarios;
 	}
->>>>>>> Stashed changes
 }
 
 
