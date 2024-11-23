@@ -5,77 +5,78 @@ Background:
    
    @PostNewProgram  
    Scenario Outline: Check if Admin able to create a program with valid endpoint and request body
-    Given Admin creates POST request by reading from data file with "<scenario>" and endpoint "<endpoint>"
-    When  Admin sends POST Api HTTPS request
-    Then  Admin Validates "<expectedStatusCode>" updated Status with response body "<expectedResMsg>"
+    Given Admin creates POST request by reading from data file with "<scenario>" and endpoint 
+    When  Admin sends POST Api HTTPS request for given scenario "<scenario>"
+    Then  Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
     Examples:
-     |  scenario               | expectedStatusCode | endpoint    | expectedResMsg                               |
-     | post_addProgram         | 201                | saveprogram |"Created"                                     | 
-     | post_InvalidEndpoint    | 404                | saveprogram |"Not Found"                                   |
-     | post_ExistingProgName   | 400                | saveprogram |"cannot create program , since already exists"|
-     | post_InvalidMethod      | 405                | saveprogram |"Method Not Allowed"                          |
-     | post_InvalidReqBody     | 400                | saveprogram |"Bad Request"                                 |
-     | post_MissingValues      | 400                | saveprogram |"Invalid Status: must be Active or Inactive   |
-     | post_MissingAdditField  | 201                | saveprogram |"Created"                                     |
-     | post_NullValues         | 500                | saveprogram |"Internal Server Error"                       |
-     | post_NoAuth             | 401                | saveprogram |"Unauthorized"                                |
+     |  scenario               |                         
+     | post_addProgram         | 
+     | post_InvalidEndpoint    | 
+     | post_ExistingProgName   | 
+     | post_InvalidMethod      |
+     | post_InvalidReqBody     |
+     | post_MissingValues      |
+     | post_MissingAdditField  |
+     | post_NullValues         |
+     | post_NoAuth             |
+     
      
      
    @GetAllRequestProgram  
    Scenario Outline: Check if Admin able to retrieve all programs with valid Endpoint
-    Given Admin creates GETAll request by reading from data file with "<scenario>" and endpoint "<endpoint>"
-    When  Admin sends GETAll Api HTTPS request
-    Then  Admin receives "<expectedStatusCode>" updated Status with response body "<expectedResMsg>"
+    Given Admin creates GETAll request by reading from data file with "<scenario>" and endpoint 
+    When  Admin sends GETAll Api HTTPS request for given scenario "<scenario>"
+    Then  Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
     Examples:
-     |  scenario                  | expectedStatusCode | endpoint    |expectedResMsg      |
-     | getAll_validEndpoint       | 200                | allPrograms |"OK"                |
-     | getAll_InvalidEndpoint     | 404                | invalidPath |"Not Found"         |
-     | getAll_InvalidMethod       | 405                | allPrograms |"Method Not Allowed"|
-     | getAll_NoAuth              | 401                | allPrograms |"Unauthorized"      |
+     |  scenario                  | 
+     | getAll_validEndpoint       | 
+     | getAll_InvalidEndpoint     | 
+     | getAll_InvalidMethod       | 
+     | getAll_NoAuth              | 
      
      
    @GetRequestByProgramID  
    Scenario Outline: Check if Admin able to update a program with valid programID endpoint and valid request body
-    Given Admin creates GET ProgId Api request by reading from data file with "<scenario>" and endpoint "<endpoint>" and programId "<programId>"
-    When  Admin sends GET ProgId "<programId>" HTTPS request
-    Then  Admin receives "<expectedStatusCode>" updated Status with response body
+    Given Admin creates GET ProgId Api request by reading from data file with "<scenario>" and endpoint and programId 
+    When  Admin sends GET ProgId HTTPS request for given scenario "<scenario>"
+    Then  Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
     Examples:
-     |  scenario                    | expectedStatusCode | endpoint             |"<expectedResMsg>"  |
-     | getProgId_validProgId        | 200                | programs/{programId} |"OK"                |
-     | getProgId_InvalidEndpoint    | 404                | programs/{programId} |"Not Found"         |
-     | getProgId_InvalidProgId      | 404                | programs/{programId} |"Not Found"         |
-     | getProgId_InvalidBaseUri     | 404                | programs/{programId} |"Not Found"         |
-     | getProgId_NoAuth             | 401                | programs/{programId} |"Unauthorized"      |
+     |  scenario                    | 
+     | getProgId_validProgId        | 
+     | getProgId_InvalidEndpoint    |
+     | getProgId_InvalidProgId      |
+     | getProgId_InvalidBaseUri     | 
+     | getProgId_NoAuth             | 
      
      
      
    @GetAllProgramsWithAdmins  
    Scenario Outline: Check if Admin able to retrieve all programs with Admins
-    Given Admin creates GETAll with Admins request from data file with "<scenario>" and endpoint "<endpoint>" 
-    When  Admin sends GETAll with Admins HTTPS request
-    Then  Admin receives "<expectedStatusCode>" updated Status with response body "<expectedResMsg>"
+    Given Admin creates GETAll with Admins request from data file with "<scenario>" and endpoint  
+    When  Admin sends GETAll with Admins HTTPS request for given scenario "<scenario>"
+    Then  Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
     Examples:
-     |  scenario                   | expectedStatusCode | endpoint             |"<expectedResMsg>"  |
-     | getAllAdmin_validEndPoint   | 200                | allProgramsWithUsers |"Not Found"         |
-     | getAllAdmin_InvalidEndpoint | 404                | allProgramsWithUsers |"Not Found"         |
-     | getAllAdmin_InvalidMethod   | 405                | allProgramsWithUsers |"Method Not Allowed"|
-     | getAllAdmin_NoAuth          | 401                | allProgramsWithUsers |"Unauthorized"      |
+     |  scenario                   | 
+     | getAllAdmin_validEndPoint   | 
+     | getAllAdmin_InvalidEndpoint | 
+     | getAllAdmin_InvalidMethod   |
+     | getAllAdmin_NoAuth          | 
      
      
    @PutRequestbyProgramID 
    Scenario Outline: Check if Admin able to update a program with valid programID endpoint and valid request body
-    Given Admin creates PUT progId request by reading data file with "<scenario>" and endpoint "<endpoint>" and programId "<programId>"
-    When  Admin sends PUT progId HTTPS request
-    Then  Admin receives "<expectedStatusCode>" updated Status with response body
+    Given Admin creates PUT progId request by reading data file with "<scenario>" endpoint and programId 
+    When  Admin sends PUT progId HTTPS request for given scenario "<scenario>"
+    Then  Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
     Examples:
-     |  scenario                  | expectedStatusCode | endpoint               |expectedResMsg      |
-     | putProgId_validProgId      | 200                | putprogram/{programId} |"OK"                |
-     | putProgId_InvalidProgId    | 404                | putprogram/{programId} |"Not Found"         |
-     | putProgId_InvalidBaseURI   | 404                | putprogram/{programId} |"Not Found"         |
-     | putProgId_InvalidMethod    | 405                | putprogram/{programId} |"Method Not Allowed"|                                  
-     | putProgId_InvalidReqBody   | 400                | putprogram/{programId} |"Bad Request"       |
-     | putProgId_MissingReqBody   | 400                | putprogram/{programId} |"Bad Request"       |
-     | putProgId_NoAuth           | 401                | putprogram/{programId} |"Unauthorized"      | 
+     |  scenario                  | 
+     | putProgId_validProgId      | 
+     | putProgId_InvalidProgId    | 
+     | putProgId_InvalidBaseURI   |
+     | putProgId_InvalidMethod    |                                 
+     | putProgId_InvalidReqBody   | 
+     | putProgId_MissingReqBody   |
+     | putProgId_NoAuth           | 
      
     
   
