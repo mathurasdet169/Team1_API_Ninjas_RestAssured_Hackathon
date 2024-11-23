@@ -1,7 +1,41 @@
 {
-    "post_positiveLogin": {
-        "userLoginEmailId": "sdet@gmail.com",
-        "password": "LmsHackathonApi@2024"
+  "post_positiveLogin": {
+    "ReqBody": {
+      "userLoginEmailId": "sdet@gmail.com",
+      "password": "LmsHackathonApi@2024"
+    },
+    "ValidationData": {
+      "exp_code": 200,
+      "endpoint": "login"
     }
+  },
+ 
 
-}
+  "Get_AllClasses_With_ValidEndpoint": {
+    "ValidationData": {
+      "exp_code": 200,
+      "endpoint": "allclasses"
+    }
+  },
+  "Get_AllClasses_With_InvalidEndpoint": {
+    "ValidationData": {
+      "exp_code": 404,
+      "endpoint": "allClas"
+    }
+  },
+  "Get_AllClasses_With_NoAuth": {
+    "ValidationData": {
+      "exp_code": 401,
+      "endpoint": "allClasses"
+    }
+  },
+  "Get_AllClasses_With_InvalidMethod": {
+    "ValidationData": {
+      "exp_code": 405,
+      "endpoint": "allClasses"
+    }
+	
+	
+	
+  }
+  }
