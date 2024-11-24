@@ -288,7 +288,7 @@
     "scenario": "putProgId_InvalidReqBody",
     "requestBody": {
       "programName": "ApiNinjas",
-      "programStatus": "Active",
+      "programStatus": "",
       "programDescription": "Python Learning001"
     },
     "validateData": {
@@ -299,11 +299,7 @@
   },
   {
     "scenario": "putProgId_MissingReqBody",
-    "requestBody": {
-      "programName": "ApiNinjas",
-      "programStatus": "Active",
-      "programDescription": "Python Learning001"
-    },
+    "requestBody": {},
     "validateData": {
       "endpoint": "putprogram/programId",
       "expectedStatusCode": 400,
@@ -322,5 +318,152 @@
       "expectedStatusCode": 401,
       "expectedResMsg": "Unauthorized"
     }
+  },
+  
+  { 
+    "scenario": "putProgName_ValidProgName",
+    "Request_Body": {
+      "programName": "ApiNinjas",
+      "programStatus": "Active",
+      "programDescription": "Python Learning"
+    },
+    "ValidationData": {
+      "EndPoint": "program/{programName}",
+      "statusCode": 200,
+      "expectedResMsg": "OK"
+    }
+  },
+  { 
+    "scenario": "putProgName_InvalidProgName",
+    "Request_Body": {
+      "programName": "InvalidProgram",
+      "programStatus": "Active",
+      "programDescription": "Invalid Description"
+    },
+    "ValidationData": {
+      "EndPoint": "program/{programName}",
+      "statusCode": 404,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "putProgName_MissingMandField",
+    "Request_Body": {
+      "programName": "",
+      "programStatus": "Active",
+      "programDescription": "Missing Name"
+    },
+    "ValidationData": {
+      "EndPoint": "program/{programName}",
+      "statusCode": 400,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "putProgName_InvalidReqBody",
+    "Request_Body": {
+      "invalidField": "InvalidData"
+    },
+    "ValidationData": {
+      "EndPoint": "program/{programName}",
+      "statusCode": 400,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "putProgName_InvalidProgDesc",
+    "Request_Body": {
+      "programName": "ApiNinjas",
+      "programStatus": "Active",
+      "programDescription": ""
+    },
+    "ValidationData": {
+      "EndPoint": "program/{programName}",
+      "statusCode": 400,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "putProgName_ValidProgStatus",
+    "Request_Body": {
+      "programName": "ApiNinjas",
+      "programStatus": "Active",
+      "programDescription": "Valid Program Status"
+    },
+    "ValidationData": {
+      "EndPoint": "program/{programName}",
+      "statusCode": 200,
+      "expectedResMsg": "OK"
+    }
+  },
+  { 
+    "scenario": "putProgName_NoAuth",
+    "Request_Body": {
+      "programName": "ApiNinjas",
+      "programStatus": "Active",
+      "programDescription": "Unauthorized Access"
+    },
+    "ValidationData": {
+      "EndPoint": "program/{programName}",
+      "statusCode": 401,
+      "expectedResMsg": "Unauthorized"
+    }
+  },
+  
+  { 
+    "scenario": "deleteProgName_ValidProgName",
+    "Request_Body": {},
+    "ValidationData": {
+      "EndPoint": "deletebyprogname/{programName}",
+      "statusCode": 200,
+      "expectedResMsg": "OK"
+    }
+  },
+  { 
+    "scenario": "deleteProgNam_InvalidProgName",
+    "Request_Body": {},
+    "ValidationData": {
+      "EndPoint": "deletebyprogname/{programName}",
+      "statusCode": 404,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "deleteProgNam_NoAuth",
+    "Request_Body": {},
+    "ValidationData": {
+      "EndPoint": "deletebyprogname/{programName}",
+      "statusCode": 401,
+      "expectedResMsg": "Unauthorized"
+    }
+  },
+  
+  { 
+    "scenario": "deleteProgId_ValidProgId",
+    "Request_Body": {},
+    "ValidationData": {
+      "EndPoint": "deletebyprogname/{ProgramID}",
+      "statusCode": 200,
+      "expectedResMsg": "OK"
+    }
+  },
+  { 
+    "scenario": "deleteProgId_InvalidProgId",
+    "Request_Body": {},
+    "ValidationData": {
+      "EndPoint": "deletebyprogname/{ProgramID}",
+      "statusCode": 404,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "deleteProgId_NoAuth",
+    "Request_Body": {},
+    "ValidationData": {
+      "EndPoint": "deletebyprogname/{ProgramID}",
+      "statusCode": 401,
+      "expectedResMsg": "Unauthorized"
+    }
   }
+  
 ]
