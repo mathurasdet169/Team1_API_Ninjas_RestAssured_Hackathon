@@ -10,6 +10,8 @@ import java.nio.file.Paths;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 
+
+
 import com.api.payLoad.LoginPayload;
 import com.api.utilities.CommonUtils;
 import com.api.utilities.JsonReader;
@@ -46,6 +48,14 @@ public class LoginReqBody extends CommonUtils{
 
 	
 		 response = request.body(loginjsonReaderObj.login_json_Reader(path.getString("loginJsonFilePath"), "post_positiveLogin")).post(endpoint.getString("login"));
+
+
+
+	// login
+	public static void postRequestToGenerateToken() throws IOException {
+
+		response = request.body(jsonReaderObj.login1_json_Reader(path.getString("loginJsonFilePath"), "post_positiveLogin")).post(endpoint.getString("login"));
+
 		token = response.jsonPath().getString("token");
 		System.out.println("token-->" + token);
 

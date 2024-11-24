@@ -2,8 +2,14 @@ package com.api.stepDef;
 
 import java.io.IOException;
 
+import org.testng.Assert;
+
 import com.api.reqBody.LoginReqBody;
+
 import com.api.utilities.CommonUtils;
+
+import com.api.utilities.JsonReader;
+
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -31,6 +37,7 @@ public class LoginSteps {
 	}
 
 	@Then("Admin receives {int} created with auto generated token")
+
 	public void admin_receives_created_with_auto_generated_token(Integer int1) throws IOException {
 		loginReqBodyObj.validatestatuscode();
 		//loginReqBodyObj.ResponseCode();
@@ -56,6 +63,9 @@ public class LoginSteps {
 	@When("Admin calls Post Https method with valid endpoint for Invalid Password")
 	public void admin_calls_post_https_method_with_valid_endpoint_for_Invalid_Password() throws IOException {
 		loginReqBodyObj.post_invalid_Password();
+	public void admin_receives_created_with_auto_generated_token(Integer int1) {
+	
+		Assert.assertEquals(JsonReader.EXP_STATUSCODE, 200);
 	}
 
 	@Then("Admin receives {int} Bad Request with message for Invalid username")

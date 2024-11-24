@@ -12,11 +12,13 @@ import com.api.reqBody.ProgramEditDeleteJSONReader;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class CommonUtils {
 	public static RequestSpecification request;
 	public static RequestSpecification userRequest;
+	public static Response response;
 	public static ResourceBundle endpoint = ResourceBundle.getBundle("endpoint");	
 	public static ResourceBundle path = ResourceBundle.getBundle("path");	
 	
@@ -41,8 +43,9 @@ public class CommonUtils {
 	public static void setBaseRequest_withBearer () throws IOException 
 	{		
 		String token = LoginPayload.getToken();			
-		userRequest = RestAssured.given().log().all().baseUri(baseURI).header("Authorization", "Bearer " + token);
+		userRequest = RestAssured.given().baseUri(baseURI).header("Authorization", "Bearer " + token);
 	}
+
 	public static String generateRandomString(int length) {
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder result = new StringBuilder();
