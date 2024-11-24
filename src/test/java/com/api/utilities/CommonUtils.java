@@ -3,6 +3,7 @@ package com.api.utilities;
 import static io.restassured.RestAssured.baseURI;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import com.api.payLoad.LoginPayload;
@@ -41,4 +42,17 @@ public class CommonUtils {
 		String token = LoginPayload.getToken();			
 		userRequest = RestAssured.given().baseUri(baseURI).header("Authorization", "Bearer " + token);
 	}
+	
+	public static String generateRandomString(int length) {
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder result = new StringBuilder();
+        Random random = new Random();
+
+        for (int i = 0; i < length; i++) {
+            int index = random.nextInt(alphabet.length());
+            result.append(alphabet.charAt(index));
+        }
+
+        return result.toString();
+    }
 }

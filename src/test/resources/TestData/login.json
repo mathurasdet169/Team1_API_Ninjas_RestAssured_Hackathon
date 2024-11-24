@@ -1,7 +1,70 @@
 {
     "post_positiveLogin": {
+		"ReqBody":
+		{
         "userLoginEmailId": "sdet@gmail.com",
         "password": "LmsHackathonApi@2024"
-    }
+    },
+	"ValidationData":
+	{
+		"exp_code":200,
+		"endpoint":"login"
+	}
+	},
+	"Get_AllClassRecordings_With_ValidEndpoint":
+	{
+		"ValidationData":
+		{
+			"exp_code":200,
+			"statusMessage":"",
+			"endpoint":"classrecordings"
+		}
+	},
+	"Get_AllClassRecordings_With_InValidEndpoint":
+	{
+		"ValidationData":
+		{
+			"exp_code":404,
+			"endpoint":"classrec"
+		}
+	},
+	"Get_AllClassRecordings_With_InValidMethod":
+	{
+		"ValidationData":
+				{
+					"exp_code":405,
+					"endpoint":"classrecordings"
+				}
+	},
+	"Get_AllClassRecordings_With_NoAuth":
+	{
+			"ValidationData":
+					{
+						"exp_code":401,
+						"endpoint":"classrecordings"
+					}
+		},
+	"Class_Put_positive":{
+		"ReqBody":{
+		"batchId": 0,
+	    "classNo": 0,
+	    "classDate": "2023-12-16",
+	    "classTopic": "string",
+	    "classStaffId": "string",
+	    "classDescription": "string",
+	    "classComments": "string",
+	    "classNotes": "string",
+	    "classRecordingPath":"string"
+	  },
+	  "validationData":{
+		"exp_statuscode":"njgj",
+		"msg":"mnk",
+		"endpoint":""
+	  }
+	  }
+
+
+
+
 
 }
