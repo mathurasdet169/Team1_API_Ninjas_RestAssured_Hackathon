@@ -1,5 +1,6 @@
 package com.api.reqBody;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.json.JSONObject;
@@ -9,6 +10,7 @@ import com.api.payLoad.BatchPayload;
 
 import com.api.utilities.CommonUtils;
 
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
 public class BatchReqBody extends CommonUtils {
@@ -476,5 +478,10 @@ public class BatchReqBody extends CommonUtils {
 
 		}
 
+	}
+	
+	public void validateResponseSchema(String schemaFilePath ) {
+		File schemaFile = new File(schemaFilePath);
+		response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(schemaFile));	
 	}
 }

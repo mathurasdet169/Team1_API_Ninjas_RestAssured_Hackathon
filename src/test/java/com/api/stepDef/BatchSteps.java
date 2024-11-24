@@ -51,7 +51,9 @@ public class BatchSteps extends CommonUtils {
 		// Write code here that turns the phrase above into concrete actions
 
 		batchReqBodyObj.validateResponse(expectedStatusCode, "create", scenarioType);
-
+		if(scenarioType.equals("CreateBatchWithValidData")) {
+			batchReqBodyObj.validateResponseSchema(path.getString("createBatchSchema"));	
+		}
 	}
 
 	@Given("User creates PUT request")
@@ -114,6 +116,11 @@ public class BatchSteps extends CommonUtils {
 			String scenarioType) throws IOException {
 		// Write code here that turns the phrase above into concrete actions
 		batchReqBodyObj.validateResponse(expectedStatusCode, "get all", scenarioType);
+		
+		if(scenarioType.equals("GetAllBatches")) {
+			batchReqBodyObj.validateResponseSchema(path.getString("getAllBatchesSchema"));	
+		}
+		
 	}
 
 	@Given("User creates GET request by batchId with {string} data")
