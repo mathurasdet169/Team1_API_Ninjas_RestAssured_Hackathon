@@ -3,11 +3,14 @@ import com.api.payLoad.BatchPayload;
 import com.api.payLoad.LoginPayload;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.File;
 import java.io.IOException;
+
+import org.apache.commons.lang3.RandomStringUtils;
 public class JsonReader {
 	
     	public  String batch_json_Reader(String filepath,String scenarioNode) throws IOException
@@ -17,24 +20,16 @@ public class JsonReader {
             JsonNode rootNode = objectMapper.readTree(new File(filepath));
             // Access the "scenarioNode" data
             JsonNode Scenario_Node = rootNode.path(scenarioNode);
+//            ObjectNode modifiedNode = (ObjectNode) Scenario_Node;
+//            // Fetch the original batch name from the JSON, if it exists
+//            String originalBatchName = modifiedNode.path("batchName").asText();
+//            String modifiedBatchName = originalBatchName + "-" + RandomStringUtils.randomNumeric(5);
+//            // Set the new modified batch name in the JSON node
+//            modifiedNode.put("batchName", modifiedBatchName);
+            
             String batchDataJsonString = objectMapper.writeValueAsString(Scenario_Node);
-//            BatchPayload batchData = objectMapper.treeToValue(Scenario_Node, BatchPayload.class);
-//            BatchPayload batchPayLoadObj = new BatchPayload();
-            
-//            batchPayLoadObj.setBatchDescription(batchData.getBatchDescription());
-//            batchPayLoadObj.setBatchName(batchData.getBatchName());
-//            batchPayLoadObj.setBatchNoOfClasses(batchData.getBatchNoOfClasses());
-//            batchPayLoadObj.setBatchStatus(batchData.getBatchStatus());
-//            batchPayLoadObj.setProgramId(batchData.getProgramId());
-//            batchPayLoadObj.setProgramName(batchData.getProgramName());
-            
-//            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-//			 String JsonRequestBody = gson.toJson(batchData);
-//				System.out.println(JsonRequestBody);
 				return batchDataJsonString;
-            
-	
-            
+        
     	}
     	
     	

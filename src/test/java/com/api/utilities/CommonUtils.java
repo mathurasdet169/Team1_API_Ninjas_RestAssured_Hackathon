@@ -39,6 +39,6 @@ public class CommonUtils {
 	public static void setBaseRequest_withBearer () throws IOException 
 	{		
 		String token = LoginPayload.getToken();			
-		userRequest = RestAssured.given().log().all().baseUri(baseURI).header("Authorization", "Bearer " + token);
+		userRequest = RestAssured.given().baseUri(baseURI).header("Authorization", "Bearer " + token);
 	}
 }
