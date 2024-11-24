@@ -20,7 +20,7 @@ public class LoginReqBody extends CommonUtils{
 	// login
 	public static void postRequestToGenerateToken() throws IOException {
 
-		response = request.body(jsonReaderObj.login_json_Reader(path.getString("loginJsonFilePath"), "post_positiveLogin")).post(endpoint.getString("login"));
+		response = request.body(jsonReaderObj.login1_json_Reader(path.getString("loginJsonFilePath"), "post_positiveLogin")).post(endpoint.getString("login"));
 		token = response.jsonPath().getString("token");
 		System.out.println("token-->" + token);
 
