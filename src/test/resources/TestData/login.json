@@ -1,7 +1,38 @@
 {
-    "post_positiveLogin": {
+	"post_positiveLogin":{
+    "Request_Body": {
         "userLoginEmailId": "sdet@gmail.com",
         "password": "LmsHackathonApi@2024"
+    },
+    "ValidationData": {
+        "statusCode": 200
     }
-
+    },
+    "post_invalidEndPoint": {
+		"Request_Body":{
+		"userLoginEmailId": "sdet@gmail.com",
+        "password": "LmsHackathonApi@2024"
+	},
+	"ValidationData": {
+		"statusCode": 401
+		}
+	},
+	"post_invalidLoginUserName": {
+    "Request_Body": {
+		"userLoginEmailId": "xyz@aaa.com",
+		"password" :"LmsHackathonApi@2024"
+	},
+	 "ValidationData": {
+		"statusCode": 400
+		}
+	},
+	"post_invalidLoginPassword":{
+	"Request_Body": {
+		"userLoginEmailId": "sdet@gmail.com",
+		"password" :"xyz"
+	},
+	"ValidationData": {
+		"statusCode": 400
+	}
+	}
 }
