@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 				
 				  features={"./src/test/resources/Features"},
 				  
-				  tags=	"@login or @Program or @batch or @logout",
+				  tags=	"@Program",
 						 		 
 				  glue = { "com.api.stepDef", "com.api.hooks" },
 
