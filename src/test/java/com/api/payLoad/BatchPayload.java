@@ -11,6 +11,7 @@ public class BatchPayload {
 	String batchStatus;
 	int programId;
 	String programName;
+	String batchId;
 	//String ScenarioType;
 	
 	
@@ -49,6 +50,12 @@ public class BatchPayload {
 	}
 	public void setProgramName(String programName) {
 		this.programName = programName;
+	}
+	public String getBatchId() {
+		return batchId;
+	}
+	public void setBatchId(String batchId) {
+		this.batchId = batchId;
 	}
 	
 

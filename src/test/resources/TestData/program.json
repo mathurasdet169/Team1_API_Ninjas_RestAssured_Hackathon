@@ -26,6 +26,19 @@
     }
   },
   {
+    "scenario": "post_addProgram2",
+    "requestBody": {
+      "programName": "ApiNinjas",
+      "programStatus": "Active",
+      "programDescription": "Python Learning"
+    },
+    "validateData": {
+      "endpoint": "saveprogram",
+      "expectedStatusCode": 201,
+      "expectedResMsg": "Created"
+    }
+  },
+  {
     "scenario": "post_InvalidEndpoint",
     "requestBody": {
       "programName": "ApiNinjas",
@@ -33,7 +46,7 @@
       "programDescription": "Python Learning"
     },
     "validateData": {
-      "endpoint": "invalidEndpoint",
+      "endpoint": "invalidendpoint",
       "expectedStatusCode": 404,
       "expectedResMsg": "Not Found"
     }
@@ -288,7 +301,7 @@
     "scenario": "putProgId_InvalidReqBody",
     "requestBody": {
       "programName": "ApiNinjas",
-      "programStatus": "Active",
+      "programStatus": "",
       "programDescription": "Python Learning001"
     },
     "validateData": {
@@ -299,11 +312,7 @@
   },
   {
     "scenario": "putProgId_MissingReqBody",
-    "requestBody": {
-      "programName": "ApiNinjas",
-      "programStatus": "Active",
-      "programDescription": "Python Learning001"
-    },
+    "requestBody": {},
     "validateData": {
       "endpoint": "putprogram/programId",
       "expectedStatusCode": 400,
@@ -315,10 +324,152 @@
     "requestBody": {
       "programName": "ApiNinjas",
       "programStatus": "Active",
-      "programDescription": "Python Learning001"
+      "programDescription": "Python Learning004"
     },
     "validateData": {
       "endpoint": "putprogram/programId",
+      "expectedStatusCode": 401,
+      "expectedResMsg": "Unauthorized"
+    }
+  },
+  {
+    "scenario": "putProgName_ValidProgName",
+    "requestBody": {
+      "programName": "UpdatedProgramName",
+      "programStatus": "Active",
+      "programDescription": "Updated description"
+    },
+    "validateData": {
+      "endpoint": "putprogram/programId",
+      "expectedStatusCode": 200,
+      "expectedResMsg": "OK"
+    }
+  },
+  { 
+    "scenario": "putProgName_InvalidProgName",
+    "requestBody": {
+      "programName": "ApiNinjas",
+      "programStatus": "Active",
+      "programDescription": "Python Learning"
+    },
+    "validateData": {
+      "endpoint": "program/APiinvalidname",
+      "expectedStatusCode": 404,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "putProgName_MissingMandField",
+    "requestBody": {
+      "programName": "ApiNinjas",
+      "programStatus": "",
+      "programDescription": "Python Learning"
+    },
+    "validateData": {
+      "endpoint": "program/programName",
+      "expectedStatusCode": 400,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "putProgName_InvalidReqBody",
+    "requestBody": {
+      "programName": "ApiNinjas",
+      "programStatus": "Active001",
+      "programDescription": "Python Learning"
+    },
+    "validateData": {
+      "endpoint": "program/programName",
+      "expectedStatusCode": 400,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "putProgName_InvalidProgDesc",
+    "requestBody": {
+      "programName": "ApiNinjas",
+      "programStatus": "Active",
+      "programDescription": "#"
+    },
+    "validateData": {
+      "endpoint": "program/programName",
+      "expectedStatusCode": 400,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "putProgName_ValidProgStatus",
+    "requestBody": {
+      "programName": "ApiNinjas",
+      "programStatus": "Active",
+      "programDescription": "Python Learning"
+    },
+    "validateData": {
+      "endpoint": "program/programName",
+      "expectedStatusCode": 200,
+      "expectedResMsg": "OK"
+    }
+  },
+  { 
+    "scenario": "putProgName_NoAuth",
+    "requestBody": {
+      "programName": "ApiNinjas",
+      "programStatus": "Active",
+      "programDescription": "Python Learning"
+    },
+    "validateData": {
+      "endpoint": "program/programName",
+      "expectedStatusCode": 401,
+      "expectedResMsg": "Unauthorized"
+    }
+  },
+  {
+    "scenario": "deleteProgId_ValidProgId",
+    "validateData": {
+      "endpoint": "deletebyprogid/programId",
+      "expectedStatusCode": 200,
+      "expectedResMsg": "OK"
+    }
+  },
+  {
+    "scenario": "deleteProgId_InvalidProgId",
+    "validateData": {
+      "endpoint": "deletebyprogid/14599A",
+      "expectedStatusCode": 404,
+      "expectedResMsg": "Not Found"
+    }
+  },
+  {
+    "scenario": "deleteProgId_NoAuth",
+    "validateData": {
+      "endpoint": "deletebyprogid/programId",
+      "expectedStatusCode": 401,
+      "expectedResMsg": "Unauthorized"
+    }
+  },
+  { 
+    "scenario": "deleteProgName_ValidProgName",
+    "requestBody": {},
+    "validateData": {
+      "endpoint": "deletebyprogname/programName",
+      "expectedStatusCode": 200,
+      "expectedResMsg": "OK"
+    }
+  },
+  { 
+    "scenario": "deleteProgNam_InvalidProgName",
+    "requestBody": {},
+    "validateData": {
+      "endpoint": "deletebyprogname/invalid",
+      "expectedStatusCode": 404,
+      "expectedResMsg": "Bad Request"
+    }
+  },
+  { 
+    "scenario": "deleteProgNam_NoAuth",
+    "requestBody": {},
+    "validateData": {
+      "endpoint": "deletebyprogname/programName",
       "expectedStatusCode": 401,
       "expectedResMsg": "Unauthorized"
     }
