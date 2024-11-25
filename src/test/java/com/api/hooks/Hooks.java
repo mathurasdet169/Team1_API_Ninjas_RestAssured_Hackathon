@@ -12,7 +12,7 @@ import io.cucumber.java.Scenario;
 public class Hooks {
 	
 	@Before
-    public void setUp(Scenario scenario) throws IOException {
+	public void setUp(Scenario scenario) throws IOException {
 		CommonUtils.setBaseUrl();
 		CommonUtils.setBaseRequest_withoutBearer();
 		
