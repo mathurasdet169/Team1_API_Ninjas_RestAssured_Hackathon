@@ -16,8 +16,13 @@ public class CommonUtils {
 	public static RequestSpecification userRequest;
 	public static ResourceBundle endpoint = ResourceBundle.getBundle("endpoint");	
 	public static ResourceBundle path = ResourceBundle.getBundle("path");	
+	//public static String FilePath=getFilePath("loginJsonFilePath");
 	
-	public static JsonReader jsonReaderObj = new JsonReader();
+	//public static String SnearioName=getScenarioName("post_positiveLogin");
+		
+	//ReqPayload(FilePath,"post_positiveLogin");
+	
+	//public static JsonReader jsonReaderObj = new JsonReader();
 	
 	public static void setBaseRequest_withoutBearer() {
 		
@@ -27,7 +32,17 @@ public class CommonUtils {
                     .contentType(ContentType.JSON);
         } 
 		
+//	private static String getScenarioName(String string) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
+	public static String getFilePath(String key) {
+	   
+			return path.getString(key);
+		
+				}
+	
 	public static void setBaseUrl()
 	{
 		baseURI = endpoint.getString("baseUrl");
@@ -39,4 +54,23 @@ public class CommonUtils {
 		String token = LoginPayload.getToken();			
 		userRequest = RestAssured.given().log().all().baseUri(baseURI).header("Authorization", "Bearer " + token);
 	}
+	
+	
+//	public static String ReqPayload(String filepath,String ScenarioName) throws IOException
+//{
+//		JsonReader jsonReaderObj=new JsonReader();
+//		
+//		 ReqBody=jsonReaderObj.jsonReqBody(FilePath, "post_positiveLogin");
+//		return ReqBody;
+//
+//}
+//
+//	
+//	public static String ReqPayload(String filepath,String ScenarioName) throws IOException
+//	{
+//		JsonReader jsonReaderObj=new JsonReader();
+//			 ReqBody=jsonReaderObj.jsonReqBody(FilePath, "post_positiveLogin");
+//			return ReqBody;
+//
+//}
 }
