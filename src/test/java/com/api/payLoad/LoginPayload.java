@@ -4,7 +4,6 @@ public class LoginPayload {
 	
 	String userLoginEmailId;
 	String password;
-	int statusCode;
 	private static String token;
 	
 	public String getUserLoginEmailId() {
@@ -24,13 +23,6 @@ public class LoginPayload {
 	}
 	public void setToken(String token) {
 		this.token = token;
-	}
-	
-	public int getstatusCode() {
-		return statusCode;
-	}
-	public void setstatusCode(int statusCode) {
-		this.statusCode=statusCode;
 	}
 
 }
