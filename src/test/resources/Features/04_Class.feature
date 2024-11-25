@@ -34,5 +34,5 @@ Feature: Class feature of the LMS Portal
       | Get_AllClassRecordings_With_InValidEndpoint |            404 | classrec        | Valid   | Not Found      |
      | Get_AllClassRecordings_With_InValidMethod   |            405 | classrecordings | InValid | Not Allowed    |
      | Get_AllClassRecordings_With_NoAuth          |            401 | classrecordings | Valid   | Not Authorized |
-      #
+      
      

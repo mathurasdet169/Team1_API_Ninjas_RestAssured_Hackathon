@@ -14,6 +14,8 @@ import java.util.ResourceBundle;
 import com.api.payLoad.LoginPayload;
 import com.api.payLoad.ProgramData;
 import com.api.reqBody.LoginReqBody;
+import com.api.reqBody.LoginJSONReader;
+import com.api.reqBody.ProgramEditDeleteJSONReader;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -31,6 +33,8 @@ public class CommonUtils {
 	public static JsonReader jsonReaderObj = new JsonReader();
 	public static List<ProgramData> lstobjPData=new ArrayList<ProgramData>();
 
+	public static LoginJSONReader loginjsonReaderObj=new LoginJSONReader();
+	
 	public static void setBaseRequest_withoutBearer() {
 		
             request = RestAssured.given()
@@ -51,7 +55,7 @@ public class CommonUtils {
 		String token = LoginPayload.getToken();			
 		userRequest = RestAssured.given().baseUri(baseURI).header("Authorization", "Bearer " + token);
 	}
-	
+
 	public static String generateRandomString(int length) {
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder result = new StringBuilder();
@@ -189,3 +193,4 @@ public class CommonUtils {
 
 
 }
+
