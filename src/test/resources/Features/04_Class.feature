@@ -89,16 +89,16 @@ Feature: Class feature of the LMS Portal
       | Put_ClassRecordings_InvalidData|400|
      
 
-  #@DeleteClassWithClassID
-  #Scenario Outline: Delete all class Details
-    #Given Admin creates DELETE Request for "<Scenario>"
-    #When Admin sends HTTPS "<Request>" with "<endpoint>" for delete request
-    #Then Admin receives <exp_statuscode> and "<Message>" with response body for delete request
-#
-    #Examples: 
-      #| Scenario                                 | exp_statuscode | Message        |
-      #| Delete_ClassDetails_With_InValidClassID  |            404 | OK             |
-      #| Delete_ClassDetails_With_InValidEndpoint |            404 | Not Found      |
-      #| Delete_ClassDetails_With_InValidMethod   |            405 | Not Allowed    |
-      #| Delete_ClassDetails_With_NoAuth          |            401 | Not Authorized |
-      #| Delete_ClassDetails_With_ValidClassID    |            200 | OK             |
+  @DeleteClassWithClassID
+  Scenario Outline: Delete all class Details
+    Given Admin creates DELETE Request for "<Scenario>"
+    When Admin sends HTTPS "<Request>" with "<endpoint>" for delete request
+    Then Admin receives <exp_statuscode> and "<Message>" with response body for delete request
+
+    Examples: 
+      | Scenario                                 | exp_statuscode | Message        |
+      | Delete_ClassDetails_With_InValidClassID  |            404 | OK             |
+      | Delete_ClassDetails_With_InValidEndpoint |            404 | Not Found      |
+      | Delete_ClassDetails_With_InValidMethod   |            405 | Not Allowed    |
+      | Delete_ClassDetails_With_NoAuth          |            401 | Not Authorized |
+      | Delete_ClassDetails_With_ValidClassID    |            200 | OK             |
