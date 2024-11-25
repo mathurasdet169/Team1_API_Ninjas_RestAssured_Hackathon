@@ -40,31 +40,31 @@ public class JsonReader {
     	}
     	
     	
-//    	public String login_json_Reader(String filepath,String scenarioNode) throws IOException
-//    	{
-//    	ObjectMapper objectMapper = new ObjectMapper();
-//            // Read the JSON file
-//            JsonNode rootNode = objectMapper.readTree(new File(filepath));
-//            // Access the "scenarioNode" data
-//            JsonNode Scenario_Node = rootNode.path(scenarioNode);
+//   	public String login_json_Reader(String filepath,String scenarioNode) throws IOException
+//   	{
+//  	ObjectMapper objectMapper = new ObjectMapper();
+//           // Read the JSON file
+//           JsonNode rootNode = objectMapper.readTree(new File(filepath));
+//           // Access the "scenarioNode" data
+//         JsonNode Scenario_Node = rootNode.path(scenarioNode);
 //            JsonNode ReqBodyNode=Scenario_Node.path("ReqBody");
+//         
+//          String loginData = objectMapper.writeValueAsString(ReqBodyNode);
+//       //  JsonNode ValidationData=Scenario_Node.path("ValidationData");
+//       //   EXP_STATUSCODE=ValidationData.get("exp_code").asInt();
+//      //    System.out.println(EXP_STATUSCODE);
 //          
-//           String loginData = objectMapper.writeValueAsString(ReqBodyNode);
-//           JsonNode ValidationData=Scenario_Node.path("ValidationData");
-//           EXP_STATUSCODE=ValidationData.get("exp_code").asInt();
-//           System.out.println(EXP_STATUSCODE);
-//           
-//           endpoint=ValidationData.get("endpoint").asText();
-//           System.out.println(endpoint);
-//   		return loginData;
-//           }
-    	
+//    //      endpoint=ValidationData.get("endpoint").asText();
+//     //     System.out.println(endpoint);
+//  		return loginData;
+//          }
+//    	
     	
     		
 
 
 
-
+//
 	public LoginPayload login_json_Reader(String filepath,String scenarioNode) throws IOException
 	{
 		ObjectMapper objectMapper = new ObjectMapper();
