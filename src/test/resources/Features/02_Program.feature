@@ -8,12 +8,13 @@ Feature: Program module requests
   Scenario Outline: Check if Admin able to create a program with valid endpoint and request body
     Given Admin creates POST request by reading from data file with "<scenario>" and endpoint
     When Admin sends POST Api HTTPS request for given scenario "<scenario>"
-    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
+    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario
 
     Examples: 
       | scenario               |
       | post_addProgram        |
       | post_addProgram1       |
+      | post_addProgram2       |
       | post_InvalidEndpoint   |
       | post_ExistingProgName  |
       | post_InvalidMethod     |
@@ -27,7 +28,7 @@ Feature: Program module requests
   Scenario Outline: Check if Admin able to retrieve all programs with valid Endpoint
     Given Admin creates GETAll request by reading from data file with "<scenario>" and endpoint
     When Admin sends GETAll Api HTTPS request for given scenario "<scenario>"
-    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
+    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario
 
     Examples: 
       | scenario               |
@@ -40,7 +41,7 @@ Feature: Program module requests
   Scenario Outline: Check if Admin able to update a program with valid programID endpoint and valid request body
     Given Admin creates GET ProgId Api request by reading from data file with "<scenario>" and endpoint and programId
     When Admin sends GET ProgId HTTPS request for given scenario "<scenario>"
-    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
+    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario
 
     Examples: 
       | scenario                  |
@@ -54,7 +55,7 @@ Feature: Program module requests
   Scenario Outline: Check if Admin able to retrieve all programs with Admins
     Given Admin creates GETAll with Admins request from data file with "<scenario>" and endpoint
     When Admin sends GETAll with Admins HTTPS request for given scenario "<scenario>"
-    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
+    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario
 
     Examples: 
       | scenario                    |
@@ -67,7 +68,7 @@ Feature: Program module requests
   Scenario Outline: Check if Admin able to update a program with valid programID endpoint and valid request body
     Given Admin creates PUT progId request by reading data file with "<scenario>" endpoint and programId
     When Admin sends PUT progId HTTPS request for given scenario "<scenario>"
-    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
+    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario
 
     Examples: 
       | scenario                 |
@@ -83,7 +84,7 @@ Feature: Program module requests
   Scenario Outline: Check if admin is able to update program name
     Given Admin create PUT progName request by reading data from data file with "<scenario>" and EndPoint
     When Admin send PUT progName request for given scenario "<scenario>"
-    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
+    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario
 
     Examples: 
       | scenario                     | 
@@ -99,18 +100,19 @@ Feature: Program module requests
   Scenario Outline: Check if admin is able to delete program name
     Given Admin create DELETE progName request by reading data from data file with "<scenario>" and EndPoint
     When Admin send DELETE progName request for given scenario "<scenario>"
-    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
+    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario
 
     Examples: 
       | scenario                      | 
       | deleteProgName_ValidProgName  | 
       | deleteProgNam_InvalidProgName |  
       | deleteProgNam_NoAuth          |  
+      
   @DeleteRequestByProgramID
   Scenario Outline: Check if admin is able to delete program id
     Given Admin create DELETE progId request by reading data from data file with "<scenario>" and EndPoint
     When Admin send DELETE progId request for given scenario "<scenario>"
-    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario"<scenario>"
+    Then Admin Validates expectedStatusCode and expectedResMsg for given scenario
 
     Examples: 
       | scenario                   | 
