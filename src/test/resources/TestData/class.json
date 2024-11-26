@@ -1,10 +1,10 @@
 {
   "CreateClassWithoutAuth": {
-<<<<<<< HEAD
-      "batchId": "{batchid}",
+
+    
 =======
       "batchId": 8664,
->>>>>>> origin/main
+
       "classComments": "Java Opps",
       "classDate": "2024-11-26",
       "classDescription": "Java topics going on",
@@ -21,7 +21,7 @@
  
   "CreateClassWithValidData": {
  
-      "batchId": 8664,
+      "batchId": 8547,
       "classComments": "Java Opps",
       "classDate": "2024-11-26",
       "classDescription": "Java topics going on",
@@ -29,11 +29,7 @@
       "classNotes": "Java",
       "classRecordingPath": "my recording path",
       "classStaffId": "U49",
-<<<<<<< HEAD
-      "classTopic": "Team1 New Class",
-=======
-      "classTopic": "Team1 New Class Mathu",
->>>>>>> origin/main
+      "classTopic": "Team1 New Class saranya",
       "classScheduledDates": [
         "2024-11-25T23:59:59.000Z",
         "2024-11-26T23:59:59.000Z"
@@ -117,11 +113,7 @@
       "classNotes": "Java",
       "classRecordingPath": "my recording path",
       "classStaffId": "U49",
-<<<<<<< HEAD
       "classTopic": "Team1 API ninjas",
-=======
-      "classTopic": "Team1 New Class",
->>>>>>> origin/main
       "classScheduledDates": [
         "2024-11-25T23:59:59.000Z",
         "2024-11-26T23:59:59.000Z"
@@ -139,18 +131,15 @@
       "classNotes": "Java",
       "classRecordingPath": "my recording path",
       "classStaffId": "U49",
-<<<<<<< HEAD
-      "classTopic": "Team1  03 API ninjas",
-=======
       "classTopic": "Team1 New Class",
->>>>>>> origin/main
+
       "classScheduledDates": [
         "2024-11-25T23:59:59.000Z",
         "2024-11-26T23:59:59.000Z"
       ]
-<<<<<<< HEAD
-    }
-=======
+
+
+
     },
 	
 	"Put_ClassDetails_With_ValidClassID":
@@ -315,5 +304,5 @@
 
 
 
->>>>>>> origin/main
+
 }

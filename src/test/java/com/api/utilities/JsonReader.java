@@ -93,7 +93,7 @@ public class JsonReader {
         ClassPayload classobj=new ClassPayload();
 	//	AddressDetails addressDetailsObj=new AddressDetails();
 		
-        classobj.setBatchId(ClassReqBody.batchId);
+        classobj.setBatchId(classreq.getBatchId());
         classobj.setClassComments(classreq.getClassComments());
         classobj.setClassDate(classreq.getClassDate());
         classobj.setClassDescription(classreq.getClassDescription());
