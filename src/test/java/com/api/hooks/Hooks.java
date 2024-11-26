@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import com.api.utilities.CommonUtils;
 
-
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
@@ -18,7 +18,12 @@ public class Hooks {
 		
         
     }
-
+	@AfterAll
+	public static void Cleanup() throws IOException {
+		CommonUtils.dataCleanUp();
+		
+	}     
+    
 
 }
 

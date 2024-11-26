@@ -193,3 +193,17 @@ Feature: Class feature of the LMS Portal
       | Delete_ClassDetails_With_InValidMethod   |            405 | Not Allowed    |
       | Delete_ClassDetails_With_NoAuth          |            401 | Not Authorized |
       | Delete_ClassDetails_With_ValidClassID    |            200 | OK             |
+  #@GetAllClassRecordings
+  #Scenario Outline: Get all class recordings
+    #Given Admin creates GET Request for "<Scenario>"
+    #When Admin sends HTTPS "<Request>" with "<endpoint>"
+    #Then Admin receives <exp_statuscode> and "<Message>" with response body.
+#
+    #Examples: 
+      #| Scenario                                    | exp_statuscode | endpoint        | Request | Message        |
+      #| Get_AllClassRecordings_With_ValidEndpoint   |            200 | classrecordings | Valid   | OK             |
+      #| Get_AllClassRecordings_With_InValidEndpoint |            404 | classrec        | Valid   | Not Found      |
+     #| Get_AllClassRecordings_With_InValidMethod   |            405 | classrecordings | InValid | Not Allowed    |
+     #| Get_AllClassRecordings_With_NoAuth          |            401 | classrecordings | Valid   | Not Authorized |
+      #
+     

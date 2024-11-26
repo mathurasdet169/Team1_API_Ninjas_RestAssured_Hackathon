@@ -1,7 +1,7 @@
 {
     "CreateBatchWithValidData": {
         "batchDescription": "Java Developer",
-        "batchName": "APINinja002",
+        "batchName": "APINinja54",
         "batchNoOfClasses": 10,
         "batchStatus": "Active",
         "programId": 16220,
@@ -10,7 +10,7 @@
 
     "CreateBatchWithMissingAdditioanlFields": {
     "batchDescription": "",
-    "batchName": "APINinjas02",
+    "batchName": "APINinjas54",
     "batchNoOfClasses": 10,
     "batchStatus": "Active",
     "programId": 16220,
@@ -69,6 +69,79 @@
       "batchStatus": "Active",
       "programId": 16225,
     "programName": "Java SpringBoot"
-     }
+     },
+
+     "UpdateBatchbyBatchId": {
+        "batchDescription": "Java Developer",
+        "batchName": "APINinjas054",
+        "batchNoOfClasses": 5,
+        "batchStatus": "Active",
+        "programId": 16220,
+      "programName": "Core Java Program"
+    },
+
+    "UpdateBatchWithDeletedBatchID": {
+        "batchDescription": "Java Developer",
+        "batchName": "APINinjas07",
+        "batchNoOfClasses": 9,
+        "batchStatus": "Active",
+        "programId": 16220,
+      "programName": "Core Java Program"
+    },
+
+    "UpdateBatchbyBatchIdWithoutAuth": {
+      "batchDescription": "Java Developer",
+      "batchName": "APINinja015",
+      "batchNoOfClasses": 5,
+      "batchStatus": "Active",
+      "programId": 16220,
+    "programName": "Core Java Program"
+  },
+
+  "UpdateBatchbyInvalidBatchId": {
+    "batchDescription": "Java Developer",
+    "batchName": "APINinja015",
+    "batchNoOfClasses": 5,
+    "batchStatus": "Active",
+    "programId": 16220,
+  "programName": "Core Java Program"
+},
+
+"UpdateBatchWithMissingData": {
+  "batchDescription": "Java Developer",
+  "batchName": "APINinja015",
+  "batchNoOfClasses": 5,
+  "batchStatus": "",
+  "programId": 16220,
+"programName": "Core Java Program"
+},
+
+"UpdateBatchWithInValidData": {
+  "batchDescription": "Java Developer",
+  "batchName": "!@#$*",
+  "batchNoOfClasses": 5,
+  "batchStatus": "Active",
+  "programId": 16220,
+"programName": "Core Java Program"
+},
+
+"UpdateBatchWithInvalidEndpoint": {
+  "batchDescription": "Java Developer",
+  "batchName": "APINinja015",
+  "batchNoOfClasses": 5,
+  "batchStatus": "Active",
+  "programId": 16220,
+"programName": "Core Java Program"
+},
+
+"UpdateBatchWithDeletedProgID": {
+  "batchDescription": "Java Developer",
+  "batchName": "APINinjas054",
+  "batchNoOfClasses": 5,
+  "batchStatus": "Active",
+  "programId": 16243,
+"programName": "Core Java Program"
+}
+
 
 }
