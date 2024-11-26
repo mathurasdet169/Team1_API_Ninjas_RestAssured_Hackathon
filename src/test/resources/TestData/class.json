@@ -1,0 +1,136 @@
+{
+  "CreateClassWithoutAuth": {
+      "batchId": "{batchid}",
+      "classComments": "Java Opps",
+      "classDate": "2024-11-26",
+      "classDescription": "Java topics going on",
+      "classNo": 2,
+      "classNotes": "Java",
+      "classRecordingPath": "my recording path",
+      "classStaffId": "U49",
+      "classTopic": "Team1 New Class",
+      "classScheduledDates": [
+        "2024-11-25T23:59:59.000Z",
+        "2024-11-26T23:59:59.000Z"
+      ]
+    },
+ 
+  "CreateClassWithValidData": {
+ 
+      "batchId": 8664,
+      "classComments": "Java Opps",
+      "classDate": "2024-11-26",
+      "classDescription": "Java topics going on",
+      "classNo": 2,
+      "classNotes": "Java",
+      "classRecordingPath": "my recording path",
+      "classStaffId": "U49",
+      "classTopic": "Team1 New Class",
+      "classScheduledDates": [
+        "2024-11-25T23:59:59.000Z",
+        "2024-11-26T23:59:59.000Z"
+      ]
+    },
+  
+  "CreateClassExistingClassTopic": {
+   
+      "batchId": 8664,
+      "classComments": "Java Opps",
+      "classDate": "2024-11-26",
+      "classDescription": "Java topics going on",
+      "classNo": 2,
+      "classNotes": "Java",
+      "classRecordingPath": "my recording path",
+      "classStaffId": "U49",
+      "classTopic": "Team1 New Class",
+      "classScheduledDates": [
+        "2024-11-25T23:59:59.000Z",
+        "2024-11-26T23:59:59.000Z"
+      ]
+    },
+  
+  "CreateClassWithMandatoryFieldsOnly": {
+  
+      "batchId": 8664,
+      "classDate": "2024-11-26",
+      "classTopic": "Team1 New Class",
+      "classScheduledDates": [
+        "2024-11-25T23:59:59.000Z",
+        "2024-11-26T23:59:59.000Z"
+      ]
+    },
+  
+  "CreateClassWithAdditionalFieldValues": {
+    
+      "batchId": 8664,
+      "classComments": "Java Opps",
+      "classDate": "2024-11-26",
+      "classDescription": "Java topics going on",
+      "classNo": 2,
+      "classNotes": "Java",
+      "classRecordingPath": "my recording path",
+      "classStaffId": "U49",
+      "classTopic": "Team1 New Class",
+      "classScheduledDates": [
+        "2024-11-25T23:59:59.000Z",
+        "2024-11-26T23:59:59.000Z"
+      ]
+    },
+  
+  "CreateClassWithInvalidData": {
+   
+      "batchId": "INVALID", 
+      "classComments": "Java Opps",
+      "classDate": "2024-11-26",
+      "classDescription": "Java topics going on",
+      "classNo": 2,
+      "classNotes": "Java",
+      "classRecordingPath": "my recording path",
+      "classStaffId": "U49",
+      "classTopic": "Team1 New Class",
+      "classScheduledDates": [
+        "2024-11-25T23:59:59.000Z",
+        "2024-11-26T23:59:59.000Z"
+      ]
+    },
+ 
+  
+  "CreateClassWithoutRequestBody": {
+    },
+  
+  
+  "CreateClassWithInvalidEndpoint": {
+
+      "batchId": 8664,
+      "classComments": "Java Opps",
+      "classDate": "2024-11-26",
+      "classDescription": "Java topics going on",
+      "classNo": 2,
+      "classNotes": "Java",
+      "classRecordingPath": "my recording path",
+      "classStaffId": "U49",
+      "classTopic": "Team1 API ninjas",
+      "classScheduledDates": [
+        "2024-11-25T23:59:59.000Z",
+        "2024-11-26T23:59:59.000Z"
+      ]
+    },
+    
+  
+  "CreateClassWithInvalidBaseURL": {
+
+      "batchId": 8664,
+      "classComments": "Java Opps",
+      "classDate": "2024-11-26",
+      "classDescription": "Java topics going on",
+      "classNo": 2,
+      "classNotes": "Java",
+      "classRecordingPath": "my recording path",
+      "classStaffId": "U49",
+      "classTopic": "Team1  03 API ninjas",
+      "classScheduledDates": [
+        "2024-11-25T23:59:59.000Z",
+        "2024-11-26T23:59:59.000Z"
+      ]
+    }
+}
