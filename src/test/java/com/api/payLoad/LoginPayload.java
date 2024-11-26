@@ -1,10 +1,15 @@
 package com.api.payLoad;
 
+import java.io.IOException;
+
+import com.api.utilities.JsonReader;
+
 public class LoginPayload {
 	
 	String userLoginEmailId;
 	String password;
 	private static String token;
+	//public static String ReqBody;
 	
 	public String getUserLoginEmailId() {
 		return userLoginEmailId;
@@ -24,5 +29,5 @@ public class LoginPayload {
 	public void setToken(String token) {
 		this.token = token;
 	}
-
+	
 }

@@ -1,6 +1,10 @@
 {
   "CreateClassWithoutAuth": {
+<<<<<<< HEAD
       "batchId": "{batchid}",
+=======
+      "batchId": 8664,
+>>>>>>> origin/main
       "classComments": "Java Opps",
       "classDate": "2024-11-26",
       "classDescription": "Java topics going on",
@@ -25,7 +29,11 @@
       "classNotes": "Java",
       "classRecordingPath": "my recording path",
       "classStaffId": "U49",
+<<<<<<< HEAD
       "classTopic": "Team1 New Class",
+=======
+      "classTopic": "Team1 New Class Mathu",
+>>>>>>> origin/main
       "classScheduledDates": [
         "2024-11-25T23:59:59.000Z",
         "2024-11-26T23:59:59.000Z"
@@ -109,7 +117,11 @@
       "classNotes": "Java",
       "classRecordingPath": "my recording path",
       "classStaffId": "U49",
+<<<<<<< HEAD
       "classTopic": "Team1 API ninjas",
+=======
+      "classTopic": "Team1 New Class",
+>>>>>>> origin/main
       "classScheduledDates": [
         "2024-11-25T23:59:59.000Z",
         "2024-11-26T23:59:59.000Z"
@@ -127,10 +139,181 @@
       "classNotes": "Java",
       "classRecordingPath": "my recording path",
       "classStaffId": "U49",
+<<<<<<< HEAD
       "classTopic": "Team1  03 API ninjas",
+=======
+      "classTopic": "Team1 New Class",
+>>>>>>> origin/main
       "classScheduledDates": [
         "2024-11-25T23:59:59.000Z",
         "2024-11-26T23:59:59.000Z"
       ]
+<<<<<<< HEAD
     }
+=======
+    },
+	
+	"Put_ClassDetails_With_ValidClassID":
+	{	
+		
+		     "classComments": "Java Opps",
+		     "classDate": "2024-11-26",
+		     "classDescription": "Java topics going on",
+		     "classNo": 2,
+		     "classNotes": "Java",
+		     "classRecordingPath": "my recording path",
+		     "classStaffId": "U49",
+		     "classTopic": "Team1 New Class",
+		     "classScheduledDates": [
+		       "2024-11-25T23:59:59.000Z",
+		       "2024-11-26T23:59:59.000Z"
+		     ]
+	},
+	
+"Put_ClassDetails_With_InValidClassID":
+{
+
+	"classComments": "Java Opps",
+	"classDate": "2024-11-26",
+	"classDescription": "Java topics going on",
+	"classNo": 2,
+	"classNotes": "Java",
+	"classRecordingPath": "my recording path",
+	"classStaffId": "U49",
+	"classTopic": "Team1 New Class",
+	"classScheduledDates": [
+	  "2024-11-25T23:59:59.000Z",
+	  "2024-11-26T23:59:59.000Z"
+	]
+},
+"Put_ClassDetails_With_InvalidEndpoint":
+{
+	"classComments": "Java Opps",
+		"classDate": "2024-11-26",
+		"classDescription": "Java topics going on",
+		"classNo": 2,
+		"classNotes": "Java",
+		"classRecordingPath": "my recording path",
+		"classStaffId": "U49",
+		"classTopic": "Team1 New Class",
+		"classScheduledDates": [
+		  "2024-11-25T23:59:59.000Z",
+		  "2024-11-26T23:59:59.000Z"
+		]
+},
+"Put_ClassDetails_With_InvalidMethod":
+{
+	"classComments": "Java Opps",
+			"classDate": "2024-11-26",
+			"classDescription": "Java topics going on",
+			"classNo": 2,
+			"classNotes": "Java",
+			"classRecordingPath": "my recording path",
+			"classStaffId": "U49",
+			"classTopic": "Team1 New Class",
+			"classScheduledDates": [
+			  "2024-11-25T23:59:59.000Z",
+			  "2024-11-26T23:59:59.000Z"
+			]
+},
+"Put_ClassDetails_With_NoAuth":
+{
+	"classComments": "Java Opps",
+				"classDate": "2024-11-26",
+				"classDescription": "Java topics going on",
+				"classNo": 2,
+				"classNotes": "Java",
+				"classRecordingPath": "my recording path",
+				"classStaffId": "U49",
+				"classTopic": "Team1 New Class",
+				"classScheduledDates": [
+				  "2024-11-25T23:59:59.000Z",
+				  "2024-11-26T23:59:59.000Z"
+				]
+},
+"Put_ClassDetails_MissingMandtoryFields":
+{
+	"classComments": "Java Opps",
+					
+					"classDescription": "Java topics going on",
+					"classNo": 2,
+					"classNotes": "Java",
+					"classRecordingPath": "my recording path",
+					
+					
+					"classScheduledDates": [
+					  "2024-11-25T23:59:59.000Z",
+					  "2024-11-26T23:59:59.000Z"
+					]
+},
+"Put_ClassDetails_With_DeletedBatchID":
+{
+	"classComments": "Java Opps",
+						"classDate": "2024-11-26",
+						"classDescription": "Java topics going on",
+						"classNo": 2,
+						"classNotes": "Java",
+						"classRecordingPath": "my recording path",
+						"classStaffId": "U49",
+						"classTopic": "Team1 New Class",
+						"classScheduledDates": [
+						  "2024-11-25T23:59:59.000Z",
+						  "2024-11-26T23:59:59.000Z"
+						]
+},
+"Put_ClassDetails_With_DeletedClassID":
+{
+	"classComments": "Java Opps",
+							"classDate": "2024-11-26",
+							"classDescription": "Java topics going on",
+							"classNo": 2,
+							"classNotes": "Java",
+							"classRecordingPath": "my recording path",
+							"classStaffId": "U49",
+							"classTopic": "Team1 New Class",
+							"classScheduledDates": [
+							  "2024-11-25T23:59:59.000Z",
+							  "2024-11-26T23:59:59.000Z"
+							]
+},
+"Put_ClassRecordings_ValidClassID":
+{	
+		"csId": 157,
+		   "classRecordingPath": "C:\\Recordings\\Team1"	
+
+},
+"Put_ClassRecordings_InValidClassID":
+{	
+		"csId": 1908765,
+		   "classRecordingPath": "C:\\Recordings\\Team1"	
+
+},
+"Put_ClassRecordings_With_InvalidEndpoint":
+{	
+		"csId": 157,
+		   "classRecordingPath": "C:\\Recordings\\Team1"	
+
+},
+"Put_Classrecordings_With_InvalidMethod":
+{	
+		"csId": 157,
+		   "classRecordingPath": "C:\\Recordings\\Team1"	
+
+},
+"Put_ClassRecordings_With_NoAuth":
+{	
+		"csId": 157,
+		   "classRecordingPath": "C:\\Recordings\\Team1"	
+
+},
+"Put_ClassRecordings_InvalidData":
+{	
+		"csId": 157,
+		   "classRecordingPath": "*&^%$#*)*^^RTV"	
+
+}
+
+
+
+>>>>>>> origin/main
 }

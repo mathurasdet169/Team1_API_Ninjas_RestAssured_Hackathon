@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 
 package com.api.payLoad;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+=======
+
+package com.api.payLoad;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+>>>>>>> origin/main
 import java.util.List;
 import java.util.ResourceBundle;
 public class ClassPayload {
@@ -22,12 +29,38 @@ public class ClassPayload {
 	    "classScheduledDates"
 	})
 
+<<<<<<< HEAD
+=======
+	
+	//@JsonPropertyOrder({ "batchDescription", "batchName", "batchNoOfClasses", "batchStatus", "programId", "programName" })
+	
+	@JsonPropertyOrder({
+	    "batchId",
+	    "classComments",
+	    "classDate",
+	    "classDescription",
+	    "classNo",
+	    "classNotes",
+	    "classRecordingPath",
+	    "classStaffId",
+	    "classTopic",
+	    "classScheduledDates",
+	   
+	})
+	
+	
+	
+>>>>>>> origin/main
   //
 //private String[] classScheduledDates;
 	 private List<String> classScheduledDates;
 
     // Other fields
+<<<<<<< HEAD
     private static String batchId;
+=======
+    private String batchId;
+>>>>>>> origin/main
     private String classComments;
     private String classDate;
     private String classDescription;
@@ -37,6 +70,10 @@ public class ClassPayload {
     private String classRecordingPath;
     private String classStaffId;
     private String classTopic;
+<<<<<<< HEAD
+=======
+   
+>>>>>>> origin/main
 
     // Getters and Setters for classScheduledDates
 //    public String[] getClassScheduledDates() {
@@ -60,6 +97,7 @@ public class ClassPayload {
         return batchId;
     }
 
+<<<<<<< HEAD
 //    public   void setBatchId(String batchId)  {
 //    	this.batchId = batchId;
 //    }
@@ -68,6 +106,10 @@ public class ClassPayload {
     
     public static void setBatchId(String batchId) {
        ClassPayload.batchId = batchId;
+=======
+    public void setBatchId(String batchId) {
+        this.batchId = batchId;
+>>>>>>> origin/main
     }
 
     public String getClassComments() {
@@ -141,6 +183,7 @@ public class ClassPayload {
     public void setClassTopic(String classTopic) {
         this.classTopic = classTopic;
     }
+<<<<<<< HEAD
     
     public static String getClassRecordEndpoint(String batchId) {
         String getClassRecordEndpoint = endpoint.getString("classRecordingsByBatchId");
@@ -162,4 +205,8 @@ public class ClassPayload {
     } 
     
     
+=======
+
+	
+>>>>>>> origin/main
 }
