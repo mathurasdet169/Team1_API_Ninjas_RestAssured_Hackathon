@@ -1,4 +1,4 @@
-@tag
+@logout
 Feature: Logout Admin
   I want to use this template for my feature file
 

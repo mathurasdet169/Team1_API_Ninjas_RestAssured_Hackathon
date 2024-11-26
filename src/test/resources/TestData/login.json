@@ -4,9 +4,7 @@
         "userLoginEmailId": "sdet@gmail.com",
         "password": "LmsHackathonApi@2024"
     },
-   
-    
-    "post_invalidEndPoint": {
+   "post_invalidEndPoint": {
 		"Request_Body":{
 		"userLoginEmailId": "sdet@gmail.com",
         "password": "LmsHackathonApi@2024"
