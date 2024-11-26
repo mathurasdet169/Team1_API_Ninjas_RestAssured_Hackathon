@@ -30,7 +30,6 @@ public class CommonUtils {
 	public static Response response;
 	public static ResourceBundle endpoint = ResourceBundle.getBundle("endpoint");
 	public static ResourceBundle path = ResourceBundle.getBundle("path");
-
 	public static JsonReader jsonReaderObj = new JsonReader();
 	public static LoginJSONReader loginjsonReaderObj = new LoginJSONReader();
 	public static List<ProgramData> lstobjPData = new ArrayList<ProgramData>();
@@ -180,5 +179,4 @@ public class CommonUtils {
 		}
 
 	}
-
 }

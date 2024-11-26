@@ -22,8 +22,8 @@ public class Hooks {
 	public static void Cleanup() throws IOException {
 		CommonUtils.dataCleanUp();
 		
-        
-    }
+	}     
+    
 
 }
 

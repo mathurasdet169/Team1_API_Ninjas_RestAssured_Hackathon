@@ -8,6 +8,7 @@ import org.junit.Assert;
 import com.api.payLoad.BatchPayload;
 
 import com.api.utilities.CommonUtils;
+import com.api.utilities.LoggerLoad;
 
 import io.restassured.response.Response;
 
@@ -19,7 +20,7 @@ public class BatchReqBody extends CommonUtils {
 
 		response = request.body(jsonReaderObj.batch_json_Reader(path.getString("batchJsonFilePath"), scenarioType))
 				.post(endpoint.getString("createBatch"));
-		System.out.println("--createBatchWithoutAuth status--" + response.statusCode());
+		LoggerLoad.info("--createBatchWithoutAuth status--" + response.statusCode());
 		response.prettyPrint();
 		return response;
 	}
@@ -32,12 +33,15 @@ public class BatchReqBody extends CommonUtils {
 		response = request.header("Authorization", "Bearer " + LoginReqBody.getBearerToken())
 				.body(jsonReaderObj.batch_json_Reader(path.getString("batchJsonFilePath"), scenarioType))
 				.post(endpoint.getString("createBatch"));
-		System.out.println("--createBatch status-- " + response.statusCode());
+		LoggerLoad.info("--createBatch status-- " + response.statusCode());
 		response.prettyPrint();
 		if (response.statusCode() == 201) {
 			batchId = response.jsonPath().getString("batchId");
 			// batchPayload.setBatchId(batchId);
-			System.out.println("batchId---->" + batchId);
+			LoggerLoad.info("batchId---->" + batchId);
+			BatchPayload batchpayload = new BatchPayload();
+			batchpayload.setBatchId(batchId);
+			lstobjBData.add(batchpayload);
 		}
 		return response;
 
@@ -59,7 +63,7 @@ public class BatchReqBody extends CommonUtils {
 		response = request.header("Authorization", "Bearer " + LoginReqBody.getBearerToken())
 				.body(jsonReaderObj.batch_json_Reader(path.getString("batchJsonFilePath"), scenarioType))
 				.post(endpoint.getString("invalidEndPoint"));
-		System.out.println("--createBatchWithInvalidEndpoint status-- " + response.statusCode());
+		LoggerLoad.info("--createBatchWithInvalidEndpoint status-- " + response.statusCode());
 		response.prettyPrint();
 		return response;
 
@@ -77,7 +81,7 @@ public class BatchReqBody extends CommonUtils {
 		response = request.header("Authorization", "Bearer " + LoginReqBody.getBearerToken())
 				.body(jsonReaderObj.batch_json_Reader(path.getString("batchJsonFilePath"), scenarioType))
 				.put(endpoint.getString("updateByBatchId") + batchId);
-		System.out.println("--updateByBatchId-- " + response.statusCode());
+		LoggerLoad.info("--updateByBatchId-- " + response.statusCode());
 		response.prettyPrint();
 		return response;
 
@@ -88,7 +92,7 @@ public class BatchReqBody extends CommonUtils {
 		response = request
 				.body(jsonReaderObj.batch_json_Reader(path.getString("batchJsonFilePath"), scenarioType))
 				.put(endpoint.getString("updateByBatchId") + batchId);
-		System.out.println("--updateBatchByBatchIdWithoutAuth-- " + response.statusCode());
+		LoggerLoad.info("--updateBatchByBatchIdWithoutAuth-- " + response.statusCode());
 		response.prettyPrint();
 		return response;
 
@@ -102,7 +106,7 @@ public class BatchReqBody extends CommonUtils {
 		response = request.header("Authorization", "Bearer " + LoginReqBody.getBearerToken())
 				.body(jsonReaderObj.batch_json_Reader(path.getString("batchJsonFilePath"), scenarioType))
 				.put(endpoint.getString("updateByBatchId") + endpoint.getString("invalidBatchId"));
-		System.out.println("--updateByBatchId-- " + response.statusCode());
+		LoggerLoad.info("--updateByBatchId-- " + response.statusCode());
 		response.prettyPrint();
 		return response;
 
@@ -120,7 +124,7 @@ public class BatchReqBody extends CommonUtils {
 		response = request.header("Authorization", "Bearer " + LoginReqBody.getBearerToken())
 				.body(jsonReaderObj.batch_json_Reader(path.getString("batchJsonFilePath"), scenarioType))
 				.put(endpoint.getString("invalidEndPoint") + batchId);
-		System.out.println("--updateBatchByInvalidEndPoint-- " + response.statusCode());
+		LoggerLoad.info("--updateBatchByInvalidEndPoint-- " + response.statusCode());
 		response.prettyPrint();
 		return response;
 
@@ -134,7 +138,7 @@ public class BatchReqBody extends CommonUtils {
 		response = request.header("Authorization", "Bearer " + LoginReqBody.getBearerToken())
 				.body(jsonReaderObj.batch_json_Reader(path.getString("batchJsonFilePath"), scenarioType))
 				.put(endpoint.getString("updateByBatchId") + endpoint.getString("deletedBatchId"));
-		System.out.println("--updateBatchByDeletedBatchID-- " + response.statusCode());
+		LoggerLoad.info("--updateBatchByDeletedBatchID-- " + response.statusCode());
 		response.prettyPrint();
 		return response;
 
@@ -158,7 +162,7 @@ public class BatchReqBody extends CommonUtils {
 
 		response = request.header("Authorization", "Bearer " + LoginReqBody.getBearerToken())
 				.delete(endpoint.getString("deleteBatch") + batchId);
-		System.out.println("--deleteBatchByBatchID-- " + response.statusCode());
+		LoggerLoad.info("--deleteBatchByBatchID-- " + response.statusCode());
 		response.prettyPrint();
 		return response;
 	}
@@ -170,7 +174,7 @@ public class BatchReqBody extends CommonUtils {
 
 		response = request.header("Authorization", "Bearer " + LoginReqBody.getBearerToken())
 				.delete(endpoint.getString("invalidEndPoint") + batchId);
-		System.out.println("--deleteBatchWithInvalidEndpoint-- " + response.statusCode());
+		LoggerLoad.info("--deleteBatchWithInvalidEndpoint-- " + response.statusCode());
 		response.prettyPrint();
 		return response;
 	}
@@ -182,7 +186,7 @@ public class BatchReqBody extends CommonUtils {
 
 		response = request.header("Authorization", "Bearer " + LoginReqBody.getBearerToken())
 				.delete(endpoint.getString("deleteBatch") + endpoint.getString("invalidBatchId"));
-		System.out.println("--deleteBatchByInvalidBatchId-- " + response.statusCode());
+		LoggerLoad.info("--deleteBatchByInvalidBatchId-- " + response.statusCode());
 		response.prettyPrint();
 		return response;
 	}
@@ -194,7 +198,7 @@ public class BatchReqBody extends CommonUtils {
 
 		response = request
 				.delete(endpoint.getString("deleteBatch") + batchId);
-		System.out.println("--DeleteBatchWithoutAuth-- " + response.statusCode());
+		LoggerLoad.info("--DeleteBatchWithoutAuth-- " + response.statusCode());
 		response.prettyPrint();
 		return response;
 	}
@@ -284,7 +288,7 @@ public class BatchReqBody extends CommonUtils {
 			}
 
 		} else {
-			System.out.println("401 UnAuthorized. No Response Body to validate");
+			LoggerLoad.info("401 UnAuthorized. No Response Body to validate");
 		}
 
 	}
