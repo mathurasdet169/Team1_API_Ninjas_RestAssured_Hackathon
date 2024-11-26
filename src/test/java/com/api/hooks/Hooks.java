@@ -20,10 +20,10 @@ public class Hooks {
     }
 	@AfterAll
 	public static void Cleanup() throws IOException {
-		CommonUtils.DeleteAllProgram();
+		CommonUtils.dataCleanUp();
 		
-        
-    }
+	}     
+    
 
 }
 
