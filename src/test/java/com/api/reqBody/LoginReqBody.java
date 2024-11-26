@@ -6,11 +6,9 @@ import static org.testng.Assert.assertTrue;
 import java.io.IOException;
 
 import org.testng.Assert;
-
 import com.api.payLoad.LoginPayload;
 import com.api.utilities.CommonUtils;
 import com.api.utilities.JsonReader;
-
 import io.restassured.response.Response;
 
 public class LoginReqBody extends CommonUtils {
@@ -22,7 +20,7 @@ public class LoginReqBody extends CommonUtils {
 	public static Response response;
 	LoginPayload lp = new LoginPayload();
 	// JsonReader js=new JsonReader();
-
+	// login
 	public void validatestatuscode() throws IOException {
 		int actstatuscode = response.getStatusCode();
 		int Expectedcode = LoginJSONReader.EXP_STATUSCODE;
@@ -44,10 +42,8 @@ public class LoginReqBody extends CommonUtils {
 	
 //	 login
 	public static void postRequestToGenerateToken() throws IOException {
-
-		response = request
-				.body(jsonReaderObj.login_json_Reader(path.getString("loginJsonFilePath"), "post_positiveLogin"))
-				.post(endpoint.getString("login"));
+		JsonReader jsonReaderObj=new JsonReader();
+		response = request.body(jsonReaderObj.jsonReader(path.getString("loginJsonFilePath"), "post_positiveLogin")).post(endpoint.getString("login"));
 
 		token = response.jsonPath().getString("token");
 		System.out.println("token-->" + token);
@@ -104,5 +100,4 @@ public class LoginReqBody extends CommonUtils {
 	}
 	
 	
-
 }

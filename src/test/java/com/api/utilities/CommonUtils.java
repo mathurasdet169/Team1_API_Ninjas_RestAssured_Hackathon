@@ -27,6 +27,7 @@ public class CommonUtils {
 	public static RequestSpecification request;
 	public static RequestSpecification userRequest;
 	public static Response response;
+
 	public static ResourceBundle endpoint = ResourceBundle.getBundle("endpoint");
 	public static ResourceBundle path = ResourceBundle.getBundle("path");
 
@@ -43,6 +44,7 @@ public class CommonUtils {
 	}
 
 	public static void setBaseUrl() {
+
 		baseURI = endpoint.getString("baseUrl");
 	}
 
@@ -67,7 +69,7 @@ public class CommonUtils {
 	public static enum RequestType {
 		POST, PUT, GET, DELETE, NOAUTH_POST, NOAUTH_PUT, NOAUTH_GET, NOAUTH_DELETE
 	}
-
+  
 	public enum ProgramScenarioType {
 		POST_INVALID_METHOD("post_InvalidMethod"), POST_NOAUTH_REQUEST("post_NoAuth"),
 		GETALL_INVALID_METHOD("getAll_InvalidMethod"), GETALL_NOAUTH_REQUEST("getAll_NoAuth"),
@@ -179,5 +181,4 @@ public class CommonUtils {
 		}
 
 	}
-
 }
