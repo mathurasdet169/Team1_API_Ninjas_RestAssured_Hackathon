@@ -34084,3 +34084,8 @@
 2024-11-25T19:21:19,617 [main] INFO  (Logger.java:112) - [TestNG] Time taken by org.testng.reporters.XMLReporter@61a369cf: 17 ms
 2024-11-25T19:21:19,625 [main] INFO  (Logger.java:112) - [TestNG] Time taken by org.testng.reporters.EmailableReporter2@3612a60d: 8 ms
 2024-11-25T19:21:19,633 [main] INFO  (Logger.java:112) - [TestNG] Time taken by org.testng.reporters.JUnitReportReporter@5cd5e1b6: 8 ms
+2024-11-25T19:49:54,691 [main] INFO  (LoggerLoad.java:11) - Delete All Program/Batch method called: 
+2024-11-25T19:51:15,151 [main] INFO  (LoggerLoad.java:11) - Delete All Program/Batch method called: 
+2024-11-25T19:54:44,889 [main] INFO  (LoggerLoad.java:11) - Delete All Program/Batch method called: 
+2024-11-25T19:56:27,385 [main] INFO  (LoggerLoad.java:11) - Delete All Program/Batch method called: 
+2024-11-25T19:56:56,884 [main] INFO  (LoggerLoad.java:11) - Delete All Program/Batch method called: 
