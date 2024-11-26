@@ -1,8 +1,7 @@
 {
     "CreateBatchWithValidData": {
         "batchDescription": "Java Developer",
-        "batchName": "APINinja43",
-        "batchName": "APINinja54",
+        "batchName": "APINinja73",
         "batchNoOfClasses": 10,
         "batchStatus": "Active",
         "programId": 16220,
@@ -11,7 +10,7 @@
 
     "CreateBatchWithMissingAdditioanlFields": {
     "batchDescription": "",
-    "batchName": "APINinjas43",
+    "batchName": "APINinjas73",
     "batchNoOfClasses": 10,
     "batchStatus": "Active",
     "programId": 16220,
@@ -74,8 +73,7 @@
 
      "UpdateBatchbyBatchId": {
         "batchDescription": "Java Developer",
-        "batchName": "APINinjas043",
-        "batchName": "APINinjas054",
+        "batchName": "APINinjas073",
         "batchNoOfClasses": 5,
         "batchStatus": "Active",
         "programId": 16220,
@@ -85,7 +83,7 @@
     "UpdateBatchWithDeletedBatchID": {
         "batchDescription": "Java Developer",
         "batchName": "APINinjas07",
-        "batchNoOfClasses": 2,
+        "batchNoOfClasses": 4,
         "batchNoOfClasses": 9,
         "batchStatus": "Active",
         "programId": 16220,
@@ -139,8 +137,7 @@
 
 "UpdateBatchWithDeletedProgID": {
   "batchDescription": "Java Developer",
-  "batchName": "APINinjas043",
-  "batchName": "APINinjas054",
+  "batchName": "APINinjas073",
   "batchNoOfClasses": 5,
   "batchStatus": "Active",
   "programId": 16243,
