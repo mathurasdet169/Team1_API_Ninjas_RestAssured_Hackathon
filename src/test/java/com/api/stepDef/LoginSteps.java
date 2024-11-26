@@ -26,7 +26,7 @@ public class LoginSteps {
 	}
 	@Then("Admin receives {int} created with auto generated token")
 	public void admin_receives_created_with_auto_generated_token(Integer int1) throws IOException {
-		loginReqBodyObj.validatestatuscode();
+		loginReqBodyObj.expstatuscode_forLogin();
 		//loginReqBodyObj.ResponseCode();
 		loginReqBodyObj.ResponseMessage();
 	}
@@ -69,7 +69,7 @@ public class LoginSteps {
 	}
 	@Then("Admin receives {int}  unauthorized Access")
 	public void admin_receives_unauthorized_access(Integer int1) throws IOException {
-		loginReqBodyObj.validatestatuscode();
+		loginReqBodyObj.expstatuscode_forLogin();
 		//loginReqBodyObj.ResponseCode();
 		loginReqBodyObj.ResponseMessage();
 	}

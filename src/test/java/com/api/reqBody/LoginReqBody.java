@@ -96,5 +96,13 @@ public class LoginReqBody extends CommonUtils {
 		response = request.get(endpoint.getString("login"));
 
 	}
+	
+	public static void expstatuscode_forLogin() {
+		int expcode=200;
+		int actualcode=response.getStatusCode();
+		Assert.assertEquals(expcode, actualcode);
+	}
+	
+	
 
 }
