@@ -1,6 +1,10 @@
 {
   "CreateClassWithoutAuth": {
+
+    
+=======
       "batchId": 8664,
+
       "classComments": "Java Opps",
       "classDate": "2024-11-26",
       "classDescription": "Java topics going on",
@@ -25,7 +29,7 @@
       "classNotes": "Java",
       "classRecordingPath": "my recording path",
       "classStaffId": "U49",
-      "classTopic": "Team1 New APINinjas",
+      "classTopic": "Team1 New Class saranya",
       "classScheduledDates": [
         "2024-11-25T23:59:59.000Z",
         "2024-11-26T23:59:59.000Z"
@@ -109,7 +113,7 @@
       "classNotes": "Java",
       "classRecordingPath": "my recording path",
       "classStaffId": "U49",
-      "classTopic": "Team1 New Class",
+      "classTopic": "Team1 API ninjas",
       "classScheduledDates": [
         "2024-11-25T23:59:59.000Z",
         "2024-11-26T23:59:59.000Z"
@@ -128,10 +132,14 @@
       "classRecordingPath": "my recording path",
       "classStaffId": "U49",
       "classTopic": "Team1 New Class",
+
       "classScheduledDates": [
         "2024-11-25T23:59:59.000Z",
         "2024-11-26T23:59:59.000Z"
       ]
+
+
+
     },
 	
 	"Put_ClassDetails_With_ValidClassID":
@@ -293,6 +301,7 @@
 		   "classRecordingPath": "*&^%$#*)*^^RTV"	
 
 }
+
 
 
 
