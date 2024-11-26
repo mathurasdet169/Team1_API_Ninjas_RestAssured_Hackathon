@@ -39,7 +39,7 @@ public class JsonReader {
 		return loginData;
 	}
 
-	public  String class_json_Reader(String filepath,String scenarioNode) throws IOException
+	public  String classJsonReader(String filepath,String scenarioNode) throws IOException
 	{
 	ObjectMapper objectMapper = new ObjectMapper();
    
@@ -56,7 +56,7 @@ public class JsonReader {
         ClassPayload classobj=new ClassPayload();
 	//	AddressDetails addressDetailsObj=new AddressDetails();
 		
-        classobj.setBatchId(ClassReqBody.batchID);
+        classobj.setBatchId(ClassReqBody.batchId);
         classobj.setClassComments(classreq.getClassComments());
         classobj.setClassDate(classreq.getClassDate());
         classobj.setClassDescription(classreq.getClassDescription());
